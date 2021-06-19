@@ -29,7 +29,7 @@ function generateMarkdown(data) {
 // * [License](#license)
 // * [Installation](#installation)
 // * [Usage](#usage)
-// * [Contributing](#contributing)
+// * [Contributions](#contributions)
 // * [Tests](#tests)
 // * [Questions](#questions)
 
@@ -45,7 +45,7 @@ function generateMarkdown(data) {
 // ## Usage -- instructions // input
 // // what it's used for?
 
-// ## Contributing // input
+// ## Contributions // input
 
 // ## Tests // input
 // // validate
