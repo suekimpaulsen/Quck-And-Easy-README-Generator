@@ -5,8 +5,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const questions = () => {
-    return inquirer.prompt([
+const questions = [
         // title prompt
         {
             type: 'input',
@@ -75,7 +74,7 @@ const questions = () => {
             type: 'input',
             name: 'tests',
             message: 'Please enter testing information',
-            default: true
+            default: 'npm test'
         },
         // github username for questions prompt
         {
@@ -105,19 +104,18 @@ const questions = () => {
                 }
             }
         },
-    ])
-}
+    ]
 
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
-        .then(data => generateMarkdown.push(data))
+        .then(data => generateMarkdown(data))
         // .then writeFile
         .catch(err => console.log(err))
 }
