@@ -23,9 +23,16 @@ const questions = () => {
         },
         // description prompt
         {
+            type: 'confirm',
+            name: 'confirmDescription',
+            message: 'Would you like to enter some information about the project for a description section?',
+            default: true
+        },
+        {
             type: 'input',
             name: 'description',
             message: 'Please provide a description of your project (Required)',
+            when: ({ confirmDescription }) => confirmDescription,
             validate: descriptionInput => {
                 if (descriptionInput) {
                     return true;
@@ -107,7 +114,13 @@ const questions = () => {
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+        .prompt(questions)
+        .then(data => generateMarkdown.push(data))
+        // .then writeFile
+        .catch(err => console.log(err))
+}
 
 // Function call to initialize app
 init();

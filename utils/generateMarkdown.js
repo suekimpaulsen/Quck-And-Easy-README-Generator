@@ -12,50 +12,37 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+# ${data.title}
 
+## Description
+${data.description}
+
+## Table of Contents
+* [License](#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributions](#contributions)
+* [Tests](#tests)
+* [Questions](#questions)
+
+## License
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## Contributions // input
+${data.contributions}
+
+## Tests
+${data.tests}
+
+## Questions
+If you have any questions, please send me an email at <${data.email}> or visit my [GitHub](https://github.com/${data.github}).
 `;
 }
-
-// template with notes
-// const generateMarkdown
-
-// `# title // input
-
-// ## Description // input
-
-// ## Table of Contents
-// // click the link > go to the corresponding section
-// * [License](#license)
-// * [Installation](#installation)
-// * [Usage](#usage)
-// * [Contributions](#contributions)
-// * [Tests](#tests)
-// * [Questions](#questions)
-
-// ## License // checkbox
-// // badge for that license is added
-// // a notice is added that
-// // explains which license the application is covered under
-
-// ## Installation // input
-// // change directory, npm package step by step instruction how to use it
-// // development container on vs code github
-
-// ## Usage -- instructions // input
-// // what it's used for?
-
-// ## Contributions // input
-
-// ## Tests // input
-// // validate
-
-// ## Questions // input (github username & email)
-// // add github username
-// // link to my github profile
-// // add email address
-// // with instructions on how to reach me with additional questions
-// `
-
 
 module.exports = generateMarkdown;
