@@ -16,16 +16,16 @@ description
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
-installation
+Installation instructions will go here
 
 ## Usage
-usage
+Usage information will go here
 
-## Contributions // input
-contributions
+## Contributions
+Contributions information will go here
 
 ## Tests
-testing info
+Testing information will go here
 
 ## Questions
-If you have any questions, please send me an email at <test@email.com> or visit my [GitHub](https://github.com/username).
+If you have any questions, please send me an email at <address@youremail.com> or visit my [GitHub](https://github.com/username).
