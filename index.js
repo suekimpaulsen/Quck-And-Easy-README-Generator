@@ -44,8 +44,16 @@ const questions = [
         {
             type: 'checkbox',
             name: 'license',
-            message: 'Please choose a license for your README. Check all that apply',
-            choices: ['MIT', 'Apache 2.0', 'General Public License', 'BSD 2-clause', 'BSD 3-clause', 'BSD 4-clause']
+            message: 'Please choose a license for your README. Select one or none',
+            choices: ['MIT', 'Apache 2.0', 'General Public License', 'BSD 2-clause', 'BSD 3-clause', 'BSD 4-clause'],
+            validate: licenseInput => {
+                if (licenseInput.length <= 1) {
+                    return true;
+                } else {
+                    console.log('Please select ONE or none');
+                    return false;
+                }
+            }
         },
         // installation prompt
         {
@@ -94,14 +102,7 @@ const questions = [
             type: 'input',
             name: 'email',
             message: 'Please enter your email address',
-            validate: emailInput => {
-                if (emailInput) {
-                    return true;
-                } else {
-                    console.log('Please enter your email address');
-                    return false;
-                }
-            }
+            default: 'address@youremail.com'
         },
     ]
 
@@ -113,8 +114,7 @@ function init() {
          const pageReadme = generateMarkdown(data);
          fs.writeFile('./generated-README.md', pageReadme, err => {
              if (err) throw new Error(err);
-             console.log('Readme created! Check out README.md in this directory to see it')
-             console.log(data)
+             console.log('Readme created! Check out generated-README.md in this directory to see it')
          })
         })
 }

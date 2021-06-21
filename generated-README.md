@@ -1,8 +1,8 @@
 
-# a
+# readme generator
 
 ## Description
-undefined
+description
 
 ## Table of Contents
 * [License](#license)
@@ -13,7 +13,7 @@ undefined
 * [Questions](#questions)
 
 ## License
-undefined
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 Installation instructions will go here
@@ -28,4 +28,4 @@ Contributions information will go here
 Testing information will go here
 
 ## Questions
-If you have any questions, please send me an email at <s> or visit my [GitHub](https://github.com/a).
+If you have any questions, please send me an email at <address@youremail.com> or visit my [GitHub](https://github.com/username).
