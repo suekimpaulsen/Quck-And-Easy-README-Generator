@@ -53,28 +53,28 @@ const questions = [
             type: 'input',
             name: 'installation',
             message: 'Please enter any installation instructions',
-            default: true
+            default: 'Installation instructions will go here'
         },
         // usage prompt
         {
             type: 'input',
             name: 'usage',
             message: 'Please enter usage information',
-            default: true
+            default: 'Usage information will go here'
         },
         // contributions prompt
         {
             type: 'input',
             name: 'contributions',
             message: 'Please enter contributions',
-            default: true
+            default: 'Contributions information will go here'
         },
         // tests prompt
         {
             type: 'input',
             name: 'tests',
             message: 'Please enter testing information',
-            default: 'npm test'
+            default: 'Testing information will go here'
         },
         // github username for questions prompt
         {
@@ -106,19 +106,38 @@ const questions = [
         },
     ]
 
+function writeToFile(markdownContent) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./README.md', markdownContent, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'Readme created!'
+            })
+        })
+    })
+}
 
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
-        .prompt(questions)
-        .then(data => generateMarkdown(data))
-        // .then writeFile
-        .catch(err => console.log(err))
+     .prompt(questions)
+     .then(data => generateMarkdown(data))
+     .then(markdownContent => writeToFile(markdownContent))
+     .catch(err => console.log(err))
 }
+
+// .then(data => {
+//     const pageReadme = generateMarkdown(data);
+//     fs.writeFile('./README.md', pageReadme, err => {
+//         if (err) throw new Error(err);
+//         console.log('Readme created! Check out README.md in this directory to see it');
+//     });
+
 
 // Function call to initialize app
 init();
