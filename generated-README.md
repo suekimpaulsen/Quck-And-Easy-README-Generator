@@ -2,7 +2,7 @@
 # a
 
 ## Description
-s
+undefined
 
 ## Table of Contents
 * [License](#license)
@@ -13,7 +13,7 @@ s
 * [Questions](#questions)
 
 ## License
-license
+undefined
 
 ## Installation
 Installation instructions will go here
@@ -28,4 +28,4 @@ Contributions information will go here
 Testing information will go here
 
 ## Questions
-If you have any questions, please send me an email at <f> or visit my [GitHub](https://github.com/d).
+If you have any questions, please send me an email at <s> or visit my [GitHub](https://github.com/a).
