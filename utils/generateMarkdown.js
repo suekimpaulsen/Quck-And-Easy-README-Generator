@@ -68,7 +68,7 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
-## Contributions // input
+## Contributions
 ${data.contributions}
 
 ## Tests

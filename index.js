@@ -114,7 +114,7 @@ function init() {
          const pageReadme = generateMarkdown(data);
          fs.writeFile('./generated-README.md', pageReadme, err => {
              if (err) throw new Error(err);
-             console.log('Readme created! Check out generated-README.md in this directory to see it')
+             console.log('Readme created! Check out README.md in this directory to see it')
          })
         })
 }

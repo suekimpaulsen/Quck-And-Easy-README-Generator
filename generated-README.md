@@ -1,5 +1,5 @@
 
-# readme generator
+# Readme Generator
 
 ## Description
 description
@@ -16,16 +16,16 @@ description
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
-Installation instructions will go here
+installation
 
 ## Usage
-Usage information will go here
+usage
 
 ## Contributions // input
-Contributions information will go here
+contributions
 
 ## Tests
-Testing information will go here
+testing info
 
 ## Questions
-If you have any questions, please send me an email at <address@youremail.com> or visit my [GitHub](https://github.com/username).
+If you have any questions, please send me an email at <test@email.com> or visit my [GitHub](https://github.com/username).
